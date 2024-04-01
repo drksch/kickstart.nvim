@@ -769,22 +769,20 @@ require('lazy').setup({
 
   --Noice Intergration. 
   {
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
-  dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 10000,
-    }
-  },
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = { timeout = 10000
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+      }
+  }
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -875,6 +873,7 @@ require('lazy').setup({
     opts = {},
     dependencies = 'nvim-lua/plenary.nvim',
   },
+
   { --VimbeGood 
     'ThePrimeagen/vim-be-good',
   },
