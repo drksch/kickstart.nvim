@@ -90,7 +90,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
+-- Set to true if you have a Nerd Font installed and selected in the terminal.
 vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -770,6 +770,7 @@ require('lazy').setup({
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'sg' },
+          { name = 'codeium'}
         },
       }
     end,
@@ -913,7 +914,8 @@ require('lazy').setup({
       'hrsh7th/nvim-cmp',
     },
     config = function()
-      require('codeium').setup {}
+      require('codeium').setup ({
+      }):
     end,
   },
 
