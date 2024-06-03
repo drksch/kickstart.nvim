@@ -90,7 +90,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Set to true if you have a Nerd Font installed
+-- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -906,6 +906,17 @@ require('lazy').setup({
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
+  { -- for Codeium
+    'Exafunction/codeium.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'hrsh7th/nvim-cmp',
+    },
+    config = function()
+      require('codeium').setup {}
+    end,
+  },
+
   { --for Sourcegraph Cody
     'sourcegraph/sg.nvim',
     opts = {},
@@ -916,10 +927,28 @@ require('lazy').setup({
     'ThePrimeagen/vim-be-good',
   },
 
-  { --Ranger
-    'kevinhwang91/rnvimr',
-    opts = {},
-  },
+  { --Testing Oil.nvim
+     "stevearc/oil.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    require("oil").setup {
+      columns = { "icon" },
+      keymaps = {
+        ["<C-h>"] = false,
+        ["<M-h>"] = "actions.select_split",
+      },
+      view_options = {
+        show_hidden = true,
+      },
+    }
+
+    -- Open parent directory in current window
+    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+    -- Open parent directory in floating window
+    vim.keymap.set("n", "<space>-", require("oil").toggle_float)
+  end,
+},
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
