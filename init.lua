@@ -801,21 +801,22 @@ require('lazy').setup({
   opts = { signs = false } 
   },
 
-  --Noice Intergration. 
+  --Noice Intergration.
   {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = { timeout = 10000
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    opts = {
+      timeout = 10000,
       -- add any options here
     },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
+      'MunifTanjim/nui.nvim',
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-      }
+      'rcarriga/nvim-notify',
+    },
   },
 
   { -- Collection of various small independent plugins/modules
@@ -914,8 +915,7 @@ require('lazy').setup({
       'hrsh7th/nvim-cmp',
     },
     config = function()
-      require('codeium').setup ({
-      }):
+      require('codeium').setup {}
     end,
   },
 
@@ -925,32 +925,32 @@ require('lazy').setup({
     dependencies = 'nvim-lua/plenary.nvim',
   },
 
-  { --VimbeGood 
+  { --VimbeGood
     'ThePrimeagen/vim-be-good',
   },
 
   { --Testing Oil.nvim
-     "stevearc/oil.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    require("oil").setup {
-      columns = { "icon" },
-      keymaps = {
-        ["<C-h>"] = false,
-        ["<M-h>"] = "actions.select_split",
-      },
-      view_options = {
-        show_hidden = true,
-      },
-    }
+    'stevearc/oil.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('oil').setup {
+        columns = { 'icon' },
+        keymaps = {
+          ['<C-h>'] = false,
+          ['<M-h>'] = 'actions.select_split',
+        },
+        view_options = {
+          show_hidden = true,
+        },
+      }
 
-    -- Open parent directory in current window
-    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+      -- Open parent directory in current window
+      vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
-    -- Open parent directory in floating window
-    vim.keymap.set("n", "<space>-", require("oil").toggle_float)
-  end,
-},
+      -- Open parent directory in floating window
+      vim.keymap.set('n', '<space>-', require('oil').toggle_float)
+    end,
+  },
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
