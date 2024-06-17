@@ -770,7 +770,7 @@ require('lazy').setup({
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'sg' },
-          { name = 'codeium'}
+          { name = 'codeium' },
         },
       }
     end,
@@ -794,12 +794,21 @@ require('lazy').setup({
     end,
   },
 
-  -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', 
-  event = 'VimEnter', 
-  dependencies = { 'nvim-lua/plenary.nvim' }, 
-  opts = { signs = false } 
+  -- Neo Modern Testing
+  {
+    'cdmill/neomodern.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('neomodern').setup {
+        -- optional configuration here
+      }
+      -- require('neomodern').load()
+    end,
   },
+
+  -- Highlight todo, notes, etc in comments
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   --Noice Intergration.
   {
