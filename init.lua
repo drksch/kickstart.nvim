@@ -975,8 +975,30 @@ require('lazy').setup({
   },
   
   { -- For School Writing
-    'junegunn/goyo.vim',
-    'junegunn/limelight.vim',
+    --'junegunn/goyo.vim',
+    --'junegunn/limelight.vim',
+  },
+
+  { --For School Writing Test1: Markdown
+      'folke/zen-mode.nvim'
+      opts ={
+        window = {
+          backdrop = 0.75
+          options = {
+            relativenumber = false
+            list = false
+          },
+        },
+      }, 
+  },
+
+  { --For School Writing Test2: Markdown
+      'folke/twilight.nvim'
+      opts = {
+        alpha = 0.75,
+        treesitter = true
+      },
+      exclude =  {'.go', '.py',},
   },
 
   { --VimbeGood
