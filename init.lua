@@ -963,7 +963,7 @@ require('lazy').setup({
 
   { -- for Codeium
     'Exafunction/codeium.nvim',
-    event = VeryLazy
+    event = VeryLazy,
     dependencies = {
       'nvim-lua/plenary.nvim',
       'hrsh7th/nvim-cmp',
