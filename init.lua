@@ -983,10 +983,10 @@ require('lazy').setup({
       'folke/zen-mode.nvim',
       opts = {
         window = {
-          backdrop = 0.75
+          backdrop = 0.75,
           options = {
-            relativenumber = false
-            list = false
+            relativenumber = false,
+            list = false,
           },
         },
       }, 
@@ -996,7 +996,7 @@ require('lazy').setup({
       'folke/twilight.nvim',
       opts = {
         alpha = 0.75,
-        treesitter = true
+        treesitter = true,
       },
       exclude =  {'.go', '.py',},
   },
