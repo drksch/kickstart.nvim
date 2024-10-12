@@ -981,31 +981,19 @@ require('lazy').setup({
 
   { --For School Writing Test1: Markdown
       'folke/zen-mode.nvim',
-      opts = {
-        window = {
-          backdrop = 0.75,
-          options = {
-            relativenumber = false,
-            list = false,
-          },
-        },
-      }, 
+      opts = {}, 
   },
 
   { --For School Writing Test2: Markdown
       'folke/twilight.nvim',
-      opts = {
-        alpha = 0.75,
-        treesitter = true,
-      },
-      exclude =  {'.go', '.py',},
-  },
+      opts ={},
+    },
 
   { --VimbeGood
     'ThePrimeagen/vim-be-good',
   },
 
-  { --Testing Oil.nvim
+  { --Oil.nvim
     'stevearc/oil.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
