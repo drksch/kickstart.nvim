@@ -980,7 +980,7 @@ require('lazy').setup({
   },
 
   { --For School Writing Test1: Markdown
-      'folke/zen-mode.nvim'
+      'folke/zen-mode.nvim',
       opts = {
         window = {
           backdrop = 0.75
@@ -993,7 +993,7 @@ require('lazy').setup({
   },
 
   { --For School Writing Test2: Markdown
-      'folke/twilight.nvim'
+      'folke/twilight.nvim',
       opts = {
         alpha = 0.75,
         treesitter = true
