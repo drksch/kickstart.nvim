@@ -900,6 +900,9 @@ require('lazy').setup({
       -- Add animated cursors
       require('mini.animate').setup()
 
+      -- Add Icons
+      require('mini.icons').setup()
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
@@ -987,7 +990,7 @@ require('lazy').setup({
   { --For School Writing Test2: Markdown
       -- 'folke/twilight.nvim',
       -- opts ={},
-    },
+  },
 
   { --VimbeGood
     'ThePrimeagen/vim-be-good',
