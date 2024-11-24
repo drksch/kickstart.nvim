@@ -1008,7 +1008,8 @@ require('lazy').setup({
   { --For School Writing Test1: Markdown
       'folke/zen-mode.nvim',
       opts = {},
-      require("zen-mode").setup({
+      config = function()
+        require("zen-mode").setup({
         window = {
           backdrop = 0.95, 
           width = 120, -- width of the Zen window
