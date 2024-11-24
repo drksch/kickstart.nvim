@@ -1042,7 +1042,8 @@ require('lazy').setup({
             font = "+20", -- (10% increase per step)
           },
         },
-      }) 
+      })
+    end
   },  
 
   { --For School Writing Test2: Markdown
