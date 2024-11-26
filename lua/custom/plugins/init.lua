@@ -2,7 +2,7 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-
+return {
 { --For School Writing Test1: Markdown
 'folke/zen-mode.nvim',
 opts = {},
@@ -48,4 +48,15 @@ end
 'folke/twilight.nvim',
 opts ={},
 },
-return {}
+
+{
+  'stevearc/oil.nvim',
+  ---@module 'oil'
+  ---@type oil.SetupOpts
+  opts = {},
+  -- Optional dependencies
+  dependencies = { { "echasnovski/mini.icons", opts = {} } },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+}.
+
+}
