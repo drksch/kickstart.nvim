@@ -895,7 +895,7 @@ require('lazy').setup({
   },
    {
     'rebelot/kanagawa.nvim',
-    lazy = false
+    lazy = false,
     priority = 1000,
     init = function()
       ---@diagnostic disable-next-line: missing-fields
