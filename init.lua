@@ -800,16 +800,14 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('kanagawa-paper').setup {
-	styles = {
-	  comments = { italic = false }, -- Disable italics in comments
-	  },
+	      styles = {
+	        comments = { italic = false }, -- Disable italics in comments
+	      },
       }
     end,
-  },
-
+  },  
   {
     'rebelot/kanagawa.nvim',
-    lazy = false,
     priority = 1000,
     config = function()
       ---@diagnostic disable-next-line: missing-fields
@@ -818,7 +816,6 @@ require('lazy').setup({
           comments = { italic = false }, -- Disable italics in comments
         },
       }
-
       -- Load the colorscheme here.
       vim.cmd.colorscheme 'kanagawa-dragon'
     end,
@@ -939,18 +936,6 @@ require('lazy').setup({
       -- optional for telescope integration
       local ts = require('telescope').load_extension 'emoji'
       vim.keymap.set('n', '<leader>se', ts.emoji, { desc = '[S]earch [E]moji' })
-    end,
-  },
-
-  { -- for Codeium
-    'Exafunction/codeium.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'hrsh7th/nvim-cmp',
-    },
-    config = function()
-      require('codeium').setup {}
     end,
   },
 
