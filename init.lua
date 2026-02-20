@@ -619,7 +619,7 @@ require('lazy').setup({
         'codebook',
         'zls',
         'rnix-lsp',
-        --'lua_ls', -- Lua Language server
+        'lua_ls', -- Lua Language server
         'stylua', -- Used to format Lua code
         -- You can add other tools here that you want Mason to install
       })
